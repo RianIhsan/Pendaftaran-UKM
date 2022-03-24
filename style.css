@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #f0dada, #0dd0de);
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'comic neue';
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    border-radius: 10px;
+    border: 1px solid #fcfffe;
+}
+.center h1 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #fcfffe;
+    color: #fcfffe;
+}
+.center form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .koltext {
+    position: relative;
+    border-bottom: 2px solid #fcfffe;
+    margin: 30px 0;
+}
+.koltext input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.koltext label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #fcfffe;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.koltext span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #333;;
+}
+.koltext input:focus ~ label,
+.koltext input:valid ~ label {
+    top: -5px;
+    color: #333;
+}
+.koltext input:focus ~ span::before,
+.koltext input:valid ~ span::before{
+    width: 100%;
+}
+input[type="Submit"]{
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: #2691d9;
+    font-weight: bold;
+    color: #fcfffe;
+}
+.koltext #Jurusan2{
+    width: 100%;
+    border: none;
+}
